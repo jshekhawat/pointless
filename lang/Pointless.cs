@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using tools;
+using System.Linq;
 
 
 namespace lang {
@@ -17,7 +18,9 @@ namespace lang {
                 var val = Console.ReadLine();
 
                 if (val != "exit") {                    
-                    run(val);        
+                    if(!String.IsNullOrEmpty(val)) {
+                        run(val);        
+                    }
                 } else {
                     break;
                 }
